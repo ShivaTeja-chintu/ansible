@@ -3,11 +3,11 @@
   hosts: all
   tasks:
     - name: Run this when only ansible distribution is centos
-      when: ansible_distribution == "centOs"
+      when: ansible_distribution == "CentOs"
       ansible.builtin.debug:
         msg: "welcome to centOs"
     - name: Run this when only ansible distribution is centos
-      when: ansible_distribution == "ubantu"
+      when: ansible_distribution == "Ubantu"
       ansible.builtin.debug:
         msg: "welcome to centOs"
 
