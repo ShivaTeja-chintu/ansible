@@ -35,8 +35,8 @@
 
         # if we want to set a value to undefined variable from command line than we should have to write the command like 
         #  ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 -e cliurl=cli.com 02-vars.yml
+    - name: Printing promt variable
+      ansible.builtin.debug:
+        msg: "Value of the promt is  {{ promturl }}"      
 
-# note: cli varible > local variable > global variable
-    - name: Printing promt varible 
-      ansibl.builtin.debug:
-        msg: "Value of promt is {{promturl}}"
+    
