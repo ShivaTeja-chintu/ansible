@@ -5,9 +5,9 @@
     - name: Run this when only ansible distribution is centos
       when: ansible_distribution == "CentOS"
       ansible.builtin.debug:
-        msg: "welcome to centOs"
+        msg: "welcome to centOS"
     - name: Run this when only ansible distribution is centos
       when: ansible_distribution == "Ubantu"
       ansible.builtin.debug:
-        msg: "welcome to centOs"
+        msg: "welcome to centOS"
 
