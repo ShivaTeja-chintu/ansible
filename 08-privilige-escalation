@@ -8,4 +8,4 @@
       register: out
     - name: printing the id of user
       ansible.builtin.debug: 
-        msg: "the user is {{out}}"
+        msg: "the user is {{out.stdout[0]}}"
