@@ -2,5 +2,10 @@
   hosts: all
   #gather_facts: no #if you dont want facts then use it
   tasks:
-    - name: running up time command
+    - name: Running up time command
       ansible.builtin.shell: uptime
+      register: out
+
+    - name: Running up time command
+      ansible.builtin.debug:
+        msg: "The OutPut OF The UP_TIME Command IS : {{out}}" 
