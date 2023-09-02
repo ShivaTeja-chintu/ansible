@@ -9,7 +9,7 @@
       - name: print the variable
         vars:
           url: chintu.com
-        ansible.builtin.debug:
-        msg: value of local variable is {{url}}
+          ansible.builtin.debug:
+          msg: value of local variable is {{url}}
     
     
