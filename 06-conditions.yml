@@ -15,6 +15,6 @@
     - name: Run this when only anction is true
       when: action
       ansible.builtin.debug:
-        msg: "Action is {{acrion}}"
+        msg: "Action is {{action}}"
 
 
