@@ -8,4 +8,4 @@
 
     - name: Printing up time command output
       ansible.builtin.debug:
-        msg: "The OutPut OF The UP_TIME Command IS : {{out}}" 
+        msg: "The OutPut OF The UP_TIME Command IS : {{out.stdout}}" 
