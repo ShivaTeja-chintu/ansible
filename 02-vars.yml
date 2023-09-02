@@ -5,10 +5,12 @@
   
   vars:
     url: play.google.com  # Global variable accessible to all tasks in this play
+  vars_files: 
+    - dev.yml
   vars_prompt:
     - name: promturl
       prompt: "enter the promt url : "
-      private: false
+      private: false #If it is a private is false, then while entering the prompt in the CLI, it will appear to us
 
 
   tasks:
