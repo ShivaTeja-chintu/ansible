@@ -39,4 +39,4 @@
 # note: cli varible > local variable > global variable
     - name: Printing promt varible 
       ansibl.builtin.debug:
-        msg: Value of promt is {{promturl}}
+        msg: "Value of promt is {{promturl}}"
