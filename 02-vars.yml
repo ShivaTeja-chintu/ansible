@@ -1,16 +1,28 @@
+---
 - name: Demo on vars
+  
   hosts: all
+  
   vars:
-    url: play.google.com  # If we declare a variable here, then it is called as global variable that every task of this play can access this variable
-  tasks: 
-    - name: print the variable
-      ansible.builtin.debug:
-        msg: value of variable is {{url}}
+    url: play.google.com  # Global variable accessible to all tasks in this play
+  
+  tasks:
     
-    - name: print the variable
+    #task 1 
+    - name: Print the global variable
+      ansible.builtin.debug:
+        msg: "Value of the global variable is {{ url }}"
+    
+    #task 2
+    - name: Set and print a local variable
       vars:
-        url: chintu.com
+        url: chintu.com  # Local variable specific to this task
       ansible.builtin.debug:
-        msg: value of local variable is {{url}} 
-    
-    
+        msg: "Value of the local variable is {{ url }}"
+
+    #task 3
+    - name: Demo on printing undefined variable
+      vars:
+        cliurl:
+      ansible.builtin.debug:
+        msg: "Value of the local variable cliurl is {{ cliurl }}"
