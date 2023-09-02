@@ -3,4 +3,7 @@
   tasks: 
     - name: print hi from task 1
       ansible.builtin.debug:
-        msg: hi from task 1 
+        msg: hi from task 1
+    - name: print hi from task 1
+      ansible.builtin.debug:
+        msg: hi from task 2  
