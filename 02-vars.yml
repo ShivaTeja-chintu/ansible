@@ -6,7 +6,7 @@
   vars:
     url: play.google.com  # Global variable accessible to all tasks in this play
   vars_files: 
-    - dev.yml
+    - "{{ENV}}.yml"
   vars_prompt:
     - name: promturl
       prompt: "enter the promt url : "
