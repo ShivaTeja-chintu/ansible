@@ -1,0 +1,63 @@
+---
+- name: Demo On Tags
+  hosts: all 
+  tasks: 
+    - name: this is a frontend task
+      ansible.builtin.debug:
+        msg: Installing Frontend
+    - name: starting frontend
+      ansible.builtin.debug:
+        msg: Starting frontend
+    
+    - name: This is a backend task 
+      ansible.builtin.debug:
+        msg: Installing backend
+    - name: starting backend
+      ansible.builtin.debug:
+        msg: Starting backend
+    
+    - name: this is a Db task
+      ansible.builtin.debug:
+        msg: installing DB
+    - name: starting DB
+      ansible.builtin.debug:
+        msg: Starting DB
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name:
+#   hosts: all
+#   vars: 
+#     action: false
+#   tasks:
+#     - name:
+#       ansible.builtin.debug:
+#         msg: 
+#     - name: 
+#       ansible.builtin.debug:
+#         msg: 
+#     - name: 
+#       ansible.builtin.debug:
+#         msg: 
+#     - name:
+#       ansible.builtin.debug:
+#         msg:

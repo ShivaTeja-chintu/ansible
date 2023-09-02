@@ -4,22 +4,22 @@
   vars: 
     action: false
   tasks:
-    # - name: Run this when only ansible distribution is centos
-    #   when: ansible_distribution == "CentOS"
-    #   ansible.builtin.debug:
-    #     msg: "welcome to centOS"
-    # - name: Run this when only ansible distribution is centos
-    #   when: ansible_distribution == "Ubantu"
-    #   ansible.builtin.debug:
-    #     msg: "welcome to centOS"
-    # - name: Run this when only anction is true
-    #   when: action
-    #   ansible.builtin.debug:
-    #     msg: "Action is {{action}}"
+    - name: Run this when only ansible distribution is centos
+      when: ansible_distribution == "CentOS"
+      ansible.builtin.debug:
+        msg: "welcome to centOS"
+    - name: Run this when only ansible distribution is centos
+      when: ansible_distribution == "Ubantu"
+      ansible.builtin.debug:
+        msg: "welcome to centOS"
+    - name: Run this when only anction is true
+      when: action
+      ansible.builtin.debug:
+        msg: "Action is {{action}}"
     - name: Run this when only anction variable is declared 
       when: action is not defined 
       ansible.builtin.debug:
-        msg: "action variable is declared"
+        msg: "action variable is not declared"
 
 
 
