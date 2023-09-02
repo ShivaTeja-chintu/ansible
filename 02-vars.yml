@@ -8,6 +8,7 @@
   vars_prompt:
     - name: promturl
       prompt: "enter the promt url : "
+      private: false
 
 
   tasks:
