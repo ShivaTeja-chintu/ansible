@@ -1,0 +1,9 @@
+- name: Demo on vars
+  hosts: all
+  vars:
+    url: play.google.com  # If we declare a variable here, then it is called as global variable that every task of this play can access this variable
+  tasks: 
+    - name: print the variable
+      ansible.builtin.debug:
+        msg: value of variable is {{url}}
+    
