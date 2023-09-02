@@ -21,6 +21,15 @@
         msg: "Value of the local variable is {{ url }}"
 
     #task 3
-    - name: Demo on printing undefined variable
-      ansible.builtin.debug:
-        msg: "Value of the local variable cliurl is {{ cliurl }}"
+    # - name: Demo on printing undefined variable
+    #   ansible.builtin.debug:
+    #     msg: "Value of the local variable cliurl is {{ cliurl }}"
+    #     #output :
+        #atal: [172.31.44.231]: FAILED! => 
+        # {"msg": "The task includes an option with an undefined variable. 
+        # The error was: 'cliurl' is undefined - name: Demo on printing undefined variable
+
+        # if we want to set a value to undefined variable from command line than we should have to write the command like 
+        #  ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 -e cliurl=cli.com 02-vars.yml
+
+
