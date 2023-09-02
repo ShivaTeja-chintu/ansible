@@ -1,8 +1,8 @@
 - name: Demo on vars
   hosts: all
   tasks:
-    name: printing the defauly variable 
-      ansible.builtin.debug:
-        msg: The server flafour is "{{ansible_distribution}}"
+    name: printing the defauly variable
+    ansible.builtin.debug:
+      msg: The server flafour is "{{ansible_distribution}}"
 
   
