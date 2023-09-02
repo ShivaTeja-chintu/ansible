@@ -22,7 +22,5 @@
 
     #task 3
     - name: Demo on printing undefined variable
-      vars:
-        cliurl:
       ansible.builtin.debug:
         msg: "Value of the local variable cliurl is {{ cliurl }}"
