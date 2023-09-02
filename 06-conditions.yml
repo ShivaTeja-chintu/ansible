@@ -15,6 +15,6 @@
     - name: Run this when only anction is true
       when: action
       ansible.builtin.debug:
-        msg: "welcome to centOS"
+        msg: "Action is {{acrion}}"
 
 
