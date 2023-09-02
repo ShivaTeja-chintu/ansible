@@ -1,6 +1,8 @@
 ---
 - name: Demo on Conditions 
   hosts: all
+  vars: 
+    action: true
   tasks:
     - name: Run this when only ansible distribution is centos
       when: ansible_distribution == "CentOS"
@@ -10,4 +12,9 @@
       when: ansible_distribution == "Ubantu"
       ansible.builtin.debug:
         msg: "welcome to centOS"
+    - name: Run this when only anction is true
+      when: action
+      ansible.builtin.debug:
+        msg: "welcome to centOS"
+
 
