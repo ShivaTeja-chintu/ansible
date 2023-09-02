@@ -16,4 +16,4 @@
     
     - name: Printing up time command output
       ansible.builtin.debug:
-        msg: "The Exit code of UP_TIME Command IS : {{ EXIT_CODE }}
+        msg: "The Exit code of UP_TIME Command IS : {{ EXIT_CODE }}"
