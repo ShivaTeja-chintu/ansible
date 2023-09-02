@@ -1,0 +1,11 @@
+- name: DEmo on package installation 
+  hosts: all
+  become: yes # We mentioned yes Because the Below commands in the playbook will be executed as a root user
+  tasks:
+    - name: Installing Nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present 
+        # By using Present it will instal the Package mentioned.
+        # Want to update then we should have to Mention  latest
+        # If you want to Remove the package we should have to mention  as absent.
