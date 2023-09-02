@@ -6,6 +6,6 @@
       ansible.builtin.shell: uptime
       register: out
 
-    - name: Running up time command
+    - name: Printing up time command output
       ansible.builtin.debug:
         msg: "The OutPut OF The UP_TIME Command IS : {{out}}" 
