@@ -7,7 +7,7 @@
     url: play.google.com  # Global variable accessible to all tasks in this play
   vars_prompt:
     - name: promturl
-      promt: "enter the promt url : "
+      prompt: "enter the promt url : "
 
 
   tasks:
