@@ -12,7 +12,7 @@
     
     - name: Declaring the Variable
       set_fact:
-      EXIT_CODE: "{{out.rc}}"
+        EXIT_CODE: "{{out.rc}}"
     
     - name: Printing up time command output
       ansible.builtin.debug:
