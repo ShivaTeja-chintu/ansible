@@ -2,7 +2,7 @@
 - name: Demo on Conditions 
   hosts: all
   vars: 
-    action: true
+    action: false
   tasks:
     - name: Run this when only ansible distribution is centos
       when: ansible_distribution == "CentOS"
