@@ -1,0 +1,11 @@
+- name: Demo Privilige Escalations
+  hosts: all
+  #gather_facts: no #if you dont want facts then use it
+  become: yes
+  tasks:
+    - name: Checking user ID
+      ansible.builtin.shell: id | grep 'centos' || grep 'root' | grep -v grep
+      register: out
+    - name: printing the id of user
+      ansible.builtin.debug: 
+        msg: "the user is {{out}}"
