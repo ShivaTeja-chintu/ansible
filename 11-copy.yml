@@ -1,0 +1,7 @@
+- name: Copy file with owner and permissions
+  ansible.builtin.copy:
+    src: systemd.service
+    dest: /home/centos/systemd.service
+    # owner: foo
+    # group: foo
+    # mode: '0644'
