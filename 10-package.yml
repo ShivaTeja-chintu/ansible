@@ -1,6 +1,5 @@
 - name: DEmo on package installation 
   hosts: all
-  gather_facts: no
   become: yes # We mentioned yes Because the Below commands in the playbook will be executed as a root user
   tasks:
     - name: Installing Nginx
