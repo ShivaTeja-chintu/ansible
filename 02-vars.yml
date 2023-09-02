@@ -43,6 +43,6 @@
         msg: "Value of the promt is  {{ promturl }}"  
     - name: This is env specific
       ansible.builtin.debug:
-        msg: "Value of the promt is  {{INS_typ}}"          
+        msg: "Value of the promt is  {{INS_TYP}}"          
 
     
