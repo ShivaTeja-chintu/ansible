@@ -35,7 +35,7 @@
 
 - name: Installing Artifacts with npm install
   community.general.npm:
-    path: /home/{{ AppUser }}/{{ COMPONENT }}/
+    path: /home/{{AppUser}}/{{COMPONENT}}/
 
 - name: copying the systemd files
   ansible.builtin.template: 
