@@ -1,5 +1,5 @@
 - name: Playbook to configure Frontend
   become: yes
-  hosts: frontend
+  hosts: "{{COMPONENT}}"
   roles: 
-    - frontend
+    - "{{COMPONENT}}"
