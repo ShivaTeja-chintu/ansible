@@ -27,6 +27,6 @@
 
 - name: copying the file to {{AppUser}} home directore 
   ansible.builtin.copy: 
-  src: /tmp/{{AppUser}}/{{COMPONENT}}/archive/main.zip
-  dest: /home/{{AppUser}}/{{COMPONENT}}/archive/main.zip
-  remote_src: yes
+    src: /tmp/{{AppUser}}/{{COMPONENT}}/archive/main.zip
+    dest: /home/{{AppUser}}/{{COMPONENT}}/archive/main.zip
+    remote_src: yes
