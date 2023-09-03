@@ -22,8 +22,8 @@
 - name: Performing {{COMPONENT}} Clean-up
   ansible.builtin.file:
     path: /home/{{ AppUser }}/{{ COMPONENT }}
-    state: absent
-  ignore_errors: yes  # Ignoring errors for clean-up
+    state: absent # Ignoring errors for clean-up
+  ignore_errors: yes
 
 - name: copying the file to {{AppUser}} home directore 
   ansible.builtin.copy: 
@@ -35,7 +35,7 @@
 
 - name: Installing Artifacts with npm install
   community.general.npm:
-    path: /home/roboshop/catalogue/
+    path: /home/roboshop/user/
 
 - name: copying the systemd files
   ansible.builtin.template: 
