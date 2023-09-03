@@ -10,7 +10,7 @@
 
 - name: starting {{COMPONENT}}
   systemd:
-    name: mongodb
+    name: mongod
     state: restarted
     enabled: yes
     daemon_reload: yes
