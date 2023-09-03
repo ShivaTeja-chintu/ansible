@@ -25,10 +25,10 @@
     state: absent
   ignore_errors: yes  # Ignoring errors for clean-up
 
-- name: Copying the File to {{AppUser}} Home Directory
-  ansible.builtin.copy:
-    src: "/tmp/{{ COMPONENT }}/main.zip"
-    dest: "/home/{{ AppUser }}/{{ COMPONENT }}/main.zip"
+- name: copying the file to {{AppUser}} home directore 
+  ansible.builtin.copy: 
+    src: /tmp/{{AppUser}}/{{COMPONENT}}/archive/main.zip
+    dest: /home/{{AppUser}}/{{COMPONENT}}/archive/main.zip
     remote_src: yes
 
 # Add more tasks as needed for your deployment process
