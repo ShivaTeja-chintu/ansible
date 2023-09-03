@@ -31,6 +31,7 @@
     state: restarted
     enabled: yes
     daemon_reload: yes
-- name:
-  ansible.builtin.shell:
-    msg: set-hostname {{COMPONENT}}-{{ENV}}
+
+- name: Set Hostname
+  ansible.builtin.shell: 
+    cmd: "hostnamectl set-hostname {{COMPONENT}}-{{ENV}}"
