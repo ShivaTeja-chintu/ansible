@@ -8,6 +8,12 @@
     name: "{{COMPONENT}}-org"
     state: present
 
+- name: Configuring the {{COMPONENT}} visibility
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
 - name: starting {{COMPONENT}}
   systemd:
     name: mongod
@@ -18,3 +24,17 @@
 - name: Set Hostname
   ansible.builtin.shell: 
     cmd: "hostnamectl set-hostname {{COMPONENT}}-{{ENV}}"
+
+- name: Downloading the {{COMPONENT}}-Scheema 
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/mongodb/archive/main.zip 
+    dest: /tmp 
+    remote_src: yes
+
+- name: Injecting the {{COMPONENT}} schema 
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/{{item}}.js"
+    idempotent: yes
+  loop: 
+    - users 
+    - catalogue
