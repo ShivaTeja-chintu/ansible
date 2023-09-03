@@ -1,4 +1,4 @@
-- name: copping the {{COMPONENT}} repo
+- name: copying the {{COMPONENT}} repo
   ansible.builtin.copy:
     src: redis.repo
     dest: /etc/yum.repos.d/{{COMPONENT}}.repo
