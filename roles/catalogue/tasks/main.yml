@@ -36,3 +36,19 @@
 - name: Install packages based on package.json.
   community.general.npm:
     path: /home/{{ AppUser }}/{{ COMPONENT }}
+
+- name: copying the file to {{AppUser}} home directore 
+  ansible.builtin.template: 
+    src: systemd.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
+
+- name: starting {{COMPONENT}}
+  systemd:
+    name: "{{COMPONENT}}"
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
+
+- name: Set Hostname
+  ansible.builtin.shell: 
+    cmd: "hostnamectl set-hostname {{COMPONENT}}-{{ENV}}"
