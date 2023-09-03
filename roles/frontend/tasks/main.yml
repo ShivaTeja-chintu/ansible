@@ -3,7 +3,7 @@
     name: nginx
     state: present
 
-- name: Downloading the Frontend component 
+- name: Downloading the Frontend and extracting the Frontend 
   ansible.builtin.unarchive:
     src: https://github.com/stans-robot-project/frontend/archive/main.zip 
     dest: /tmp 
