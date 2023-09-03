@@ -18,7 +18,6 @@
     dest: /tmp
     remote_src: yes
   register: extract_result
-  failed_when: extract_result.failed  # Add error handling
 
 - name: Performing {{COMPONENT}} Clean-up
   ansible.builtin.file:
