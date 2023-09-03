@@ -33,7 +33,7 @@
     group: "{{AppUser}}"
     remote_src: yes
 
-- name: copying the file to {{AppUser}} home directory
+- name: copying the systemd files
   ansible.builtin.template: 
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
