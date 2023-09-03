@@ -1,0 +1,26 @@
+- name: copping the {{COMPONENT}} repo
+  ansible.builtin.copy:
+    src: redis.repo
+    dest: /etc/yum.repos.d/{{COMPONENT}}.repo
+
+- name: Installing {{COMPONENT}}
+  ansible.builtin.package:
+    name: "{{COMPONENT}}-org"
+    state: present
+
+- name: Configuring the {{COMPONENT}} visibility
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+- name: starting {{COMPONENT}}
+  systemd:
+    name: redis
+    state: restarted
+    enabled: yes
+    daemon_reload: yes
+
+- name: Set Hostname
+  ansible.builtin.shell: 
+    cmd: "hostnamectl set-hostname {{COMPONENT}}-{{ENV}}"
