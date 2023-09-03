@@ -28,14 +28,14 @@
 - name: copying the file to {{AppUser}} home directore 
   ansible.builtin.copy: 
     src: /tmp/{{COMPONENT}}-main
-    dest: /home/{{AppUser}}/{{COMPONENT}}
+    dest: /home/{{AppUser}}/{{COMPONENT}}/
     owner: "{{AppUser}}"
     group: "{{AppUser}}"
     remote_src: yes
 
 - name: Install packages based on package.json.
   community.general.npm:
-    path: /home/{{ AppUser }}/{{ COMPONENT }}
+    path: /home/{{ AppUser }}/{{ COMPONENT }}/
 
 - name: copying the file to {{AppUser}} home directore 
   ansible.builtin.template: 
