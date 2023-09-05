@@ -35,15 +35,11 @@
   community.general.npm:
     path: /home/roboshop/{{COMPONENT}}/
 
-- name: copying the systemd files
-  ansible.builtin.template: 
-    src: systemd.service
-    dest: /etc/systemd/system/cart.service
-
-- name: starting the {{COMPONENT}}
+- name: Configuring the {{COMPONENT}}
   ansible.builtin.include_role:
     name: common
-    tasks_from: starting_the_component
+    tasks_from: conf_ser
+
 
 - name: setting the Host server Name
   ansible.builtin.include_role:

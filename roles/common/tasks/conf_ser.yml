@@ -1,0 +1,9 @@
+- name: copying the systemd files
+  ansible.builtin.template: 
+    src: systemd.service
+    dest: /etc/systemd/system/cart.service
+
+- name: starting the {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: starting_the_component
