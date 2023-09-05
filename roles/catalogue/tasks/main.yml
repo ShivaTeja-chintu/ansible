@@ -1,4 +1,4 @@
 - name: Configuring The {{COMPONENT}}
   ansible.builtin.include_role:
-    name: nodejs.yml
-    tasks_from: common
+    name: common
+    tasks_from: nodejs
