@@ -41,10 +41,6 @@
 #     - users 
 #     - catalogue
 
-- name: starting the {{COMPONENT}}
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: conf_ser
 
 - name: setting the Host server Name
   ansible.builtin.include_role:
