@@ -17,8 +17,8 @@
     daemon_reload: yes
 
 - name: Fetching the file from remote mysql server
-  ansible.builtin.slurp:  # Corrected 'builltin' to 'builtin'
-    src: /var/log/mysqld
+  ansible.builtin.slurp:  
+    src: /var/log/mysqld.log
   register: psw_log
 
 
@@ -40,6 +40,11 @@
 #   loop: 
 #     - users 
 #     - catalogue
+
+- name: starting the {{COMPONENT}}
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: conf_ser
 
 - name: setting the Host server Name
   ansible.builtin.include_role:
