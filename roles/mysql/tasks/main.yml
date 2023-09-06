@@ -21,9 +21,9 @@
     src: var/log/mysqld
   register: psw_log
 
-- name: Extracting the root password
-  ansible.builtin.set_fact:
-    DEFAULT_PASSWORD: 
+# - name: Extracting the root password
+#   ansible.builtin.set_fact:
+#     DEFAULT_PASSWORD: 
 
 
 # - name: Downloading the {{COMPONENT}}-Scheema 
