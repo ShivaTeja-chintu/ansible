@@ -17,9 +17,10 @@
     daemon_reload: yes
 
 - name: Fetching the file from remote mysql server
-  ansible.builltin.slurp:
+  ansible.builtin.slurp:  # Corrected 'builltin' to 'builtin'
     src: /var/log/mysqld
   register: psw_log
+
 
 # - name: Extracting the root password
 #   ansible.builtin.set_fact:
