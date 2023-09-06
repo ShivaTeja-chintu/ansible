@@ -18,7 +18,7 @@
 
 - name: Fetching the file from remote mysql server
   ansible.builltin.slurp:
-    src: var/log/mysqld
+    src: /var/log/mysqld
   register: psw_log
 
 # - name: Extracting the root password
