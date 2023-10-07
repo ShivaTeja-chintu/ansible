@@ -11,8 +11,6 @@
     - name: promturl
       prompt: "enter the promt url : "
       private: false #If it is a private is false, then while entering the prompt in the CLI, it will appear to us
-
-
   tasks:
     
     #task 1 
